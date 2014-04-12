@@ -7,7 +7,7 @@
 /*   By: nleroy <nleroy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/04/12 11:41:06 by nleroy            #+#    #+#             */
-/*   Updated: 2014/04/12 20:54:52 by nleroy           ###   ########.fr       */
+/*   Updated: 2014/04/12 23:00:09 by nleroy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 require_once "map.php"
@@ -21,6 +21,9 @@ Class Battlefield
 	private $_selectedship;
 	private $_selectedplayer = 0;
 	private $_players = array();
+	public $order_shield;
+	public $order_move;
+	public $order_shoot;
 	protected $map;
 
 	/* construct battlefield. only used once per game */
@@ -39,6 +42,7 @@ Class Battlefield
 		if (self::verbose)
 			echo('battlefield over');
 	}
+	/* doc */
 	public static function doc()
 	{
 	}
@@ -83,21 +87,60 @@ Class Battlefield
 	/* select ship to use */
 	public function turn_selectship(array $select)
 	{
+		$this->_selectedship->setshield(0);
+		$this->order_move = 0;
+		$this->order_shoot = 0; 
 		if ($this->_selectedship = $this->_players[$this->selectedplayer]->Select_ship($select) == false)
 			return (false);
 		else
+		{
+			$this->_selectedship->setShield($this->order_shield)
 			return (true);
+		}
+	}
+	/* set orders with an array of pp to use*/
+	public function setorders(array $orders)
+	{
+		$this->_selectedship->setshield($orders[0]);
+		$this->order_move = $orders[1];
+		$this->order_shoot = $orders[2]; 
 	}
 	/* move selected ship */
 	public function moveship()
 	{
-		if ($this->_players[$this->selectedplayer]->mooveship($turn, $this->selectedship))
-			$this->_selectedship = 0;
+		if ($this->_players[$this->selectedplayer]->mooveship($turn, $this->_selectedship))
+			return (true);
+		else
+			return (false);
 	}
 	/* shoot with selected ship */
-	public function shoot($i)
+	public function shoot($weapon, $pos_weapon)
 	{
-		$this->_players[$this->selectedplayer]->Setfire_ship($this->selectedship);		
+		$orientation = ($pos_weapon == 2) ? $this->_selectedship->getorientation() + 1 :  $this->_selectedship->getorientation();
+		$orientation = ($pos_weapon == 3) ? $this->_selectedship->getorientation() - 1 :  $this->_selectedship->getorientation();
+		$orientation = ($orientation == 5 || $orientation == 0) ? 1 : 4;
+		$missile = $this->_selectedship->getpos();
+		$weaponset = $this->_selectedship->getweapon($pos_weapon, $weapon);
+		while ($weaponset->get_charges() > 0)
+		{
+			$succed = $this->_players[$this->selectedplayer]->Setfire_ship($this->selectedship);
+			if ($succed)
+			{
+				$suceed = $weaponset->getRange()[$succed - 1];
+				for ($i = 1; $i < $suceed && $this->map->getValidElem($missile); $i++)
+				{
+					$missile[0] = ($orientation == 1) ? $missile[0] + 1 : $missile[0]; 
+					$missile[0] = ($orientation == 3) ? $missile[0] - 1 : $missile[0]; 
+					$missile[1] = ($orientation == 2) ? $missile[1] + 1 : $missile[1]; 
+					$missile[1] = ($orientation == 4) ? $missile[1] - 1 : $missile[1];
+				}
+				if (!$this->map->getValidElem($missile) && $this->map->getElem($missile))
+				{
+					$this->map->getElem($missile)->sethp($this->map->getElem($missile)->gethp() - 1);
+				}
+			}
+			$weaponset->set_charges($weaponset->get_charges() - 1);
+		}
 	}
 	/* change player */
 	public function setturn($i)
