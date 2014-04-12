@@ -7,7 +7,7 @@
 /*   By: nleroy <nleroy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/04/12 11:41:06 by nleroy            #+#    #+#             */
-/*   Updated: 2014/04/12 17:49:03 by nleroy           ###   ########.fr       */
+/*   Updated: 2014/04/12 18:42:23 by nleroy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 require_once "map.php"
@@ -52,8 +52,25 @@ Class Battlefield
 					$this->$_players[$i][$j] = new ($this->data[$i][$j]);
 				}
 			}
-			self::$launche = true;
+			self::$launch = true;
 		}
+	}
+	public function set_ship(array $pos, $player, $ship)
+	{
+		if ($this->map->getValidElem($pos) &&
+			$this->map->getValidElem(array($pos[0]) + $this->_players[$player][$ship]->get_size()[0], ($pos[1]) + $this->_players[$player][$ship]->get_size()[1])
+			&& $this->map->getValidElem(array($pos[0], ($pos[1]) + $this->_players[$player][$ship]->get_size()[1])) &&
+			$this->map->getValidElem(array($pos[0], ($pos[1]) + $this->_players[$player][$ship]->get_size()[1])))
+		{
+			for ($i; $this->_players[$player][$ship]->get_size()[0] > $i ; $i++)
+			{
+				for ($j; $this->_players[$player][$ship]->get_size()[1] > $j ; $j++)
+				{
+					$this->map->setElem($pos[0] + $i; $pos[1] + $j) =  $this->_players[$player][$ship];
+				}
+			}
+		}
+		else return (false);
 	}
 	public function turn_selectship(array $select)
 	{
@@ -62,10 +79,10 @@ Class Battlefield
 		else
 			return (true);
 	}
-	
 	public function moveship()
 	{
-		$this->_players[$this->selectedplayer]->mooveship($turn, $this->selectedship);
+		if ($this->_players[$this->selectedplayer]->mooveship($turn, $this->selectedship))
+			$this->_selectedship = 0;
 	}
 	public function shoot($i)
 	{
