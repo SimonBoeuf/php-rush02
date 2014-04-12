@@ -1,11 +1,11 @@
-=<?php
+<?php
 
 include("mysql.php");
 
 function create_cfg() {
 	$filecontent = "<?php
 \$mysql_login = '".$_POST['login']."';
-\$mysql_passwd = '".hash(whirlpool, $_POST['passwd'])."';
+\$mysql_passwd = '".$_POST['passwd']."';
 \$mysql_host = '".$_POST['host']."';
 \$mysql_db = '".$_POST['db']."';";
 	file_put_contents("cfg.php", $filecontent);

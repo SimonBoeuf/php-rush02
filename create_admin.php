@@ -12,7 +12,6 @@ function insert_db() {
 	global $mysql_db;
 	global $bool;
 
-	;
 	if ($con = connect_sql($mysql_host, $mysql_login, $mysql_passwd, $mysql_db))
 	{
 		$hash = hash('whirlpool', mysqli_real_escape_string($con, $_POST['passwd']));
