@@ -1,5 +1,5 @@
 <?php
-//test
+
 include("mysql.php");
 
 function create_cfg() {
