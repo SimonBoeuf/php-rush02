@@ -48,7 +48,17 @@ abstract class Vaisseau {
 	public function getsize(){return ($this->_size)};
 	public function getstationary(){return ($this->_stationary)};
 	public function getPlayer(){return ($this->_Player)};
-
+	public function getweapon($indice)
+	{
+		if (!array_key_exists($indice, $_weapon))
+			return false;
+		else
+			return ($_weapon[$indice]);
+	}
+	public function get_pos_weapon($indice)
+	{
+		return (getweapon($indice)->get_pos_weapon());
+	}
 
 	public function sethp($value){$this->_hp = $value};
 	public function setname($value){$this->_name = $value};

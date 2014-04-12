@@ -23,4 +23,5 @@ abstract class Weapon {
 	public function get_type(){return ($this->_type)};
 	public function get_propagation(){return ($this->_propagation)};
 	public function get_pos_w(){return ($this->_pos_w)};
-}pos_w
+}
+?>

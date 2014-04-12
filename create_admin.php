@@ -12,7 +12,6 @@ function insert_db() {
 	global $mysql_db;
 	global $bool;
 
-	;
 	if ($con = connect_sql($mysql_host, $mysql_login, $mysql_passwd, $mysql_db))
 	{
 		$hash = hash('whirlpool', mysqli_real_escape_string($con, $_POST['passwd']));
@@ -70,10 +69,12 @@ if (isset($_POST['submit']) && $_POST['submit'] == "OK"
 				<p>Admin login:<br /><input class="input" type="text" name="login" pattern=".{4,}" maxlength="30" value="" /><p />
 				<p>Admin password:<br /><input class="input" type="password" pattern=".{6,}" maxlength="30" name="passwd" value="" /><p />
 				<p>Confirm password:<br /><input class="input" type="password" pattern=".{6,}" maxlength="30" name="cpasswd" value="" /><p />
-				<input type="submit" name="submit" value="OK" /><br />Login min length: 4 chars<br />Password min length: 6 chars';
+				<input type="submit" name="submit" value="OK" /><br />Login min length: 4 chars<br />Password min length: 6 chars
+				</form>';
 			}
+		else
+			echo '<p>An error has occured, please try again</p>';
 		?>
-			</form>
 		</div>
 	</body>
 </html>

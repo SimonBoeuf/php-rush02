@@ -1,0 +1,839 @@
+/* ALL */
+
+*
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+* a:focus
+{
+	outline:0;
+}
+
+/* Fin ALL */
+
+/* BACKGROUND */
+
+div#gris
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	background: black;
+	visibility: hidden;
+}
+
+div#allbg
+{
+	position: relative;
+	margin: auto;
+	width: 1680px;
+	height: 1024px;
+	z-index: 1;
+}
+
+div#bg
+{
+	position: relative;
+	margin: auto;
+	width: 1680px;
+	height: 1024px;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	-ms-perspective: 600px;
+	-o-perspective: 600px;
+	perspective: 600px;
+	-webkit-perspective-origin:50% 20%;
+	-moz-perspective-origin:50% 20%;
+	-ms-perspective-origin:50% 20%;
+	-o-perspective-origin:50% 20%;
+	perspective-origin:50% 20%;
+	overflow: hidden;
+	z-index: 2;
+}
+
+div#Bsaint
+{
+	position: absolute;
+	z-index: 8;
+	top: 30px;
+	left: 125px;
+	width: 315px;
+	height: 840px;
+}
+
+div#Bnecrons
+{
+	position: absolute;
+	z-index: 8;
+	top: 50px;
+	left: 560px;
+	width: 230px;
+	height: 725px;
+}
+
+div#Bschaos
+{
+	position: absolute;
+	z-index: 8;
+	top: 50px;
+	left: 890px;
+	width: 230px;
+	height: 725px;
+}
+
+div#Beldar
+{
+	position: absolute;
+	z-index: 8;
+	top: 30px;
+	left: 1240px;
+	width: 315px;
+	height: 840px;
+}
+
+div#marbre
+{
+	position: absolute;
+	width: 5680px;
+	height: 2024px;
+	bottom: 0px;
+	left: -2000px;
+	background: url(plancher.png);
+	-webkit-transform: rotateX(125deg) translateZ(0px);
+	-moz-transform: rotateX(125deg) translateZ(0px);
+	-ms-transform: rotateX(125deg) translateZ(0px);
+	-o-transform: rotateX(125deg) translateZ(0px);
+	transform: rotateX(125deg) translateZ(0px);
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	transform-origin: bottom;
+	z-index: 3;
+}
+
+div#bg2
+{
+	position: absolute;
+	background: -webkit-linear-gradient( #000, #000 72%, rgba(0, 0, 0, 0));
+    background:    -moz-linear-gradient( #000, #000 72%, rgba(0, 0, 0, 0));
+    background:     -ms-linear-gradient( #000, #000 72%, rgba(0, 0, 0, 0));
+    background:      -o-linear-gradient( #000, #000 72%, rgba(0, 0, 0, 0));
+    background:         linear-gradient( #000, #000 72%, rgba(0, 0, 0, 0));
+	width: 1680px;
+	height: 1024px;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+
+div.refletg
+{
+	position: absolute;
+	top: 105%;
+	left: 0%;
+	height: 100%;
+	width: 100%;	
+	z-index: 7;
+	background: url(saint_reverse.jpg);
+}
+
+div.refleth
+{
+	position: absolute;
+	top: 105%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	z-index: 7;
+	background: url(necron_reverse.jpg);
+}
+
+div.reflete
+{
+	position: absolute;
+	top: 105%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	z-index: 7;
+	background: url(chaos_reverse.jpg);
+}
+
+div.refletes
+{
+	position: absolute;
+	top: 105%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	z-index: 7;
+	background: url(eldar_reverse.jpg);
+}
+
+div#Saint
+{
+	position: absolute;
+	top: 3%;
+	left: 10%;
+	width: 15%;
+	height: 800px;
+	background: url(sister_b.jpg);
+	-webkit-transform: translateZ(0px) rotateY(20deg);
+	-moz-transform: translateZ(0px) rotateY(20deg);
+	-ms-transform: translateZ(0px) rotateY(20deg);
+	-o-transform: translateZ(0px) rotateY(20deg);
+	transform: translateZ(0px) rotateY(20deg); 
+	z-index: 6;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	transform-origin: bottom;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+	transition:0.5s all ease-in;
+}
+
+div.st
+{
+	position: absolute;
+	top: -81.75px;
+	left: 55.5px;
+	width: 477px;
+	height: 925px;
+	-webkit-transform: translateZ(0px) rotateY(20deg);
+	-moz-transform: translateZ(0px) rotateY(20deg);
+	-ms-transform: translateZ(0px) rotateY(20deg);
+	-o-transform: translateZ(0px) rotateY(20deg);
+	transform: translateZ(0px) rotateY(20deg); 
+	z-index: 5;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+	transition:0.5s all ease-in;
+	visibility: hidden;
+	opacity: 0;
+	
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(75%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+div#Necrons
+{
+	position: absolute;
+	top: 49px;
+	left: 563px;
+	width: 225px;
+	height: 712px;
+	background: url(necron.jpg);
+	-webkit-transform: translateZ(0px) rotateY(5deg);
+	-moz-transform: translateZ(0px) rotateY(5deg);
+	-ms-transform: translateZ(0px) rotateY(5deg);
+	-o-transform: translateZ(0px) rotateY(5deg);
+	transform: translateZ(0px) rotateY(5deg);
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	transform-origin: bottom;
+	z-index: 6;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+}
+
+div.necr
+{
+	position: absolute;
+	top: -63.5px;
+	left: 450.5px;
+	width: 450px;
+	height: 837px;
+	-webkit-transform: translateZ(0px) rotateY(5deg);
+	-moz-transform: translateZ(0px) rotateY(5deg);
+	-ms-transform: translateZ(0px) rotateY(5deg);
+	-o-transform: translateZ(0px) rotateY(5deg);
+	transform: translateZ(0px) rotateY(5deg); 
+	z-index: 5;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+	visibility: hidden;
+	opacity: 0;
+	
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(75%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+div#Schaos
+{
+	position: absolute;
+	top: 50px;
+	left: 892px;
+	width: 224px;
+	height: 711px;
+	background: url(chaos.jpg);
+	-webkit-transform: translateZ(0px) rotateY(-5deg);
+	-moz-transform: translateZ(0px) rotateY(-5deg);
+	-ms-transform: translateZ(0px) rotateY(-5deg);
+	-o-transform: translateZ(0px) rotateY(-5deg);
+	transform: translateZ(0px) rotateY(-5deg); 
+	z-index: 6;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	transform-origin: bottom;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+}
+
+div.scha
+{
+	position: absolute;
+	top: -62.5px;
+	left: 779.5px;
+	width: 449px;
+	height: 836px;
+	-webkit-transform: translateZ(0px) rotateY(-5deg);
+	-moz-transform: translateZ(0px) rotateY(-5deg);
+	-ms-transform: translateZ(0px) rotateY(-5deg);
+	-o-transform: translateZ(0px) rotateY(-5deg);
+	transform: translateZ(0px) rotateY(-5deg); 
+	z-index: 5;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+	visibility: hidden;
+	opacity: 0;
+	
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(75%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+div#Eldar
+{
+	position: absolute;
+	top: 3%;
+	left: 75%;
+	width: 15%;
+	height: 800px;
+	background: url(eldar.jpg);
+	-webkit-transform: translateZ(0px) rotateY(-20deg);
+	-moz-transform: translateZ(0px) rotateY(-20deg);
+	-ms-transform: translateZ(0px) rotateY(-20deg);
+	-o-transform: translateZ(0px) rotateY(-20deg);
+	transform: translateZ(0px) rotateY(-20deg); 
+	z-index: 6;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	transform-origin: bottom;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+	transition: 0.5s all ease-in;
+}
+
+div.smar
+{
+	position: absolute;
+	top: -81.75px;
+	left: 1147.5px;
+	width: 477px;
+	height: 925px;
+	-webkit-transform: translateZ(0px) rotateY(-20deg);
+	-moz-transform: translateZ(0px) rotateY(-20deg);
+	-ms-transform: translateZ(0px) rotateY(-20deg);
+	-o-transform: translateZ(0px) rotateY(-20deg);
+	transform: translateZ(0px) rotateY(-20deg); 
+	z-index: 5;
+	-webkit-transition:0.5s all ease-in;
+	-moz-transition:0.5s all ease-in;
+	-ms-transition:0.5s all ease-in;
+	-o-transition:0.5s all ease-in;
+	transition:0.5s all ease-in;
+	visibility: hidden;
+	opacity: 0;
+
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(75%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+div.overflo
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+div.rglight
+{
+	position: absolute;
+	left: -100px;
+	top: -640px;
+	width: 500px;
+	height: 600px;	
+	-webkit-transform: rotateZ(15deg);
+	-moz-transform: rotateZ(15deg);
+	-ms-transform: rotateZ(15deg);
+	-o-transform: rotateZ(15deg);
+	transform: rotateZ(15deg);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.7) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0.7)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#b3ffffff',GradientType=0 );
+}
+
+div.rglight.close
+{
+	-webkit-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-moz-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-ms-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-o-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+	opacity: 0.2;
+}
+
+div.glight
+{
+	position: absolute;
+	top: 105%;
+	left: -100px;
+	width: 500px;
+	height: 600px;
+	-webkit-transform: rotateZ(-15deg);
+	-moz-transform: rotateZ(-15deg);
+	-ms-transform: rotateZ(-15deg);
+	-o-transform: rotateZ(-15deg);
+	transform: rotateZ(-15deg);
+
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#4dffffff',GradientType=0 ); /* IE6-9 */
+}
+
+div#Saint.close
+{
+	-webkit-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	-moz-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	-ms-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	-o-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	transform: translateZ(50px) translateX(50px) rotateY(20deg);*/
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;
+}
+
+div.st.close
+{
+	-webkit-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	-moz-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	-ms-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	-o-transform: translateZ(50px) translateX(50px) rotateY(20deg);
+	transform: translateZ(50px) translateX(50px) rotateY(20deg); 
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;
+	visibility: visible;
+	opacity: 1;
+}
+
+div.glight.close
+{
+	-webkit-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-moz-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-ms-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-o-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+}
+
+div.rhlight
+{
+	position: absolute;
+	left: -100px;
+	top: -640px;
+	width: 500px;
+	height: 600px;	
+	-webkit-transform: rotateZ(15deg);
+	-moz-transform: rotateZ(15deg);
+	-ms-transform: rotateZ(15deg);
+	-o-transform: rotateZ(15deg);
+	transform: rotateZ(15deg);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.7) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0.7)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#b3ffffff',GradientType=0 );
+}
+
+div.rhlight.close
+{
+	-webkit-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-moz-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-ms-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-o-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+	opacity: 0.2;
+}
+
+div.hlight
+{
+	position: absolute;
+	top: 105%;
+	left: -100px;
+	width: 500px;
+	height: 600px;
+	-webkit-transform: rotateZ(-15deg);
+	-moz-transform: rotateZ(-15deg);
+	-ms-transform: rotateZ(-15deg);
+	-o-transform: rotateZ(-15deg);
+	transform: rotateZ(-15deg);
+
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#4dffffff',GradientType=0 ); /* IE6-9 */
+}
+
+div#Necrons.close
+{
+	-webkit-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	-moz-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	-ms-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	-o-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	transform: translateZ(50px) translateX(10px) rotateY(5deg); 
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;
+}
+
+div.hlight.close
+{
+	-webkit-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-moz-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-ms-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-o-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+}
+
+div.necr.close
+{
+	-webkit-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	-moz-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	-ms-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	-o-transform: translateZ(50px) translateX(10px) rotateY(5deg);
+	transform: translateZ(50px) translateX(10px) rotateY(5deg); 
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;
+	visibility: visible;
+	opacity: 1;
+}
+
+div.relight
+{
+	position: absolute;
+	left: -100px;
+	top: -640px;
+	width: 500px;
+	height: 600px;	
+	-webkit-transform: rotateZ(15deg);
+	-moz-transform: rotateZ(15deg);
+	-ms-transform: rotateZ(15deg);
+	-o-transform: rotateZ(15deg);
+	transform: rotateZ(15deg);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.7) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0.7)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#b3ffffff',GradientType=0 );
+}
+
+div.relight.close
+{
+	-webkit-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-moz-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-ms-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-o-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+	opacity: 0.2;
+}
+
+div.elight
+{
+	position: absolute;
+	top: 105%;
+	left: -100px;
+	width: 500px;
+	height: 600px;
+	-webkit-transform: rotateZ(-15deg);
+	-moz-transform: rotateZ(-15deg);
+	-ms-transform: rotateZ(-15deg);
+	-o-transform: rotateZ(-15deg);
+	transform: rotateZ(-15deg);
+
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#4dffffff',GradientType=0 ); /* IE6-9 */
+}
+
+div#Schaos.close
+{
+	-webkit-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	-moz-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	-ms-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	-o-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	transform: translateZ(50px) translateX(-10px) rotateY(-5deg); 
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;	
+}
+
+div.scha.close
+{
+	-webkit-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	-moz-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	-ms-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	-o-transform: translateZ(50px) translateX(-10px) rotateY(-5deg);
+	transform: translateZ(50px) translateX(-10px) rotateY(-5deg); 
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;	
+	visibility: visible;
+	opacity: 1;
+}
+
+div.elight.close
+{
+	-webkit-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-moz-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-ms-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-o-transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	transform: rotateZ(-15deg) translateY(-1350px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+}
+
+div.reslight
+{
+	position: absolute;
+	left: -100px;
+	top: -640px;
+	width: 500px;
+	height: 600px;	
+	-webkit-transform: rotateZ(15deg);
+	-moz-transform: rotateZ(15deg);
+	-ms-transform: rotateZ(15deg);
+	-o-transform: rotateZ(15deg);
+	transform: rotateZ(15deg);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.7) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0.7)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#b3ffffff',GradientType=0 );
+}
+
+div.reslight.close
+{
+	-webkit-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-moz-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-ms-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-o-transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	transform: rotateZ(15deg) translateY(1500px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+	opacity: 0.2;
+}
+
+div.eslight
+{
+	position: absolute;
+	top: 105%;
+	left: -100px;
+	width: 500px;
+	height: 600px;
+	-webkit-transform: rotateZ(-15deg);
+	-moz-transform: rotateZ(-15deg);
+	-ms-transform: rotateZ(-15deg);
+	-o-transform: rotateZ(-15deg);
+	transform: rotateZ(-15deg);
+
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#4dffffff',GradientType=0 ); /* IE6-9 */
+}
+
+div#Eldar.close
+{
+	-webkit-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	-moz-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	-ms-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	-o-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	transform: translateZ(50px) translateX(-50px) rotateY(-20deg); 
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;
+}
+
+div.smar.close
+{
+	-webkit-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	-moz-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	-ms-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	-o-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
+	transform: translateZ(50px) translateX(-50px) rotateY(-20deg); 
+	-webkit-transition:0.25s all ease-in;
+	-moz-transition:0.25s all ease-in;
+	-ms-transition:0.25s all ease-in;
+	-o-transition:0.25s all ease-in;
+	visibility: visible;
+	opacity: 1;
+}
+
+div.eslight.close
+{
+	-webkit-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-moz-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-ms-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-o-transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	transform: rotateZ(-15deg) translateY(-1500px) translateX(300px);
+	-webkit-transition: 0.5s all ease-in;
+	-moz-transition: 0.5s all ease-in;
+	-ms-transition: 0.5s all ease-in;
+	-o-transition: 0.5s all ease-in;
+	transition: 0.5s all ease-in;
+}
+
+.race
+{
+	font-size: 30px;
+}
+
+.tra
+{
+	text-shadow: 0 0 10px #000000;
+	color: #FFFFFF;
+	vertical-align: middle;
+	font-size: 20px;
+	text-align: center;
+}
+
+div.textrace
+{
+	color: #FFFFFF;
+	position: absolute;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	left: 590px;
+	top: 312px;
+	width: 500px;
+	height: 400px;
+	visibility: hidden;
+	z-index: 10;
+	background: url(space.jpg);
+}
+
+/* Fin BACKGROUND */
