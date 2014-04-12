@@ -1,0 +1,45 @@
+BODY
+{
+	background-color:#FFFFFF;
+}
+#space
+{
+	position:absolute;
+	margin-left:-80;
+	margin-top:-70;
+}
+#valid
+{
+	position:absolute;
+	margin-left:30;
+	margin-top:50;
+}
+#space_bis
+{
+	position:absolute;
+	margin-left:200;
+	margin-top:-50;
+}
+#space_id
+{
+	position:absolute;
+	margin-left:210;
+}
+#space_pa
+{
+	position:absolute;
+	margin-left:210;
+	margin-top:40;
+}
+#space_sub
+{
+	position:absolute;
+	margin-left:260;
+	margin-top:140;
+}
+#space_cb
+{
+	position:absolute;
+	margin-left:250;
+	margin-top:160;
+}

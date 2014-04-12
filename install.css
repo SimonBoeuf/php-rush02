@@ -1,0 +1,38 @@
+div.block
+{
+	margin: auto;
+	padding: 5px;
+	width: 500px;
+	text-align: center;
+	background-color: #CCCCCC;
+	font-family: Verdana;
+	border-radius: 20px;
+	border: 2px solid #A7A7A7;
+}
+
+h1
+{
+	text-align: center;
+}
+
+.input
+{
+	width: 70%;
+	height: 15px;
+}
+
+.text_input
+{
+	width: 20%;
+	text-align: left;
+}
+
+td
+{
+	text-align: center;
+}
+
+table
+{
+	width: 100%;
+}
