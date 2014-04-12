@@ -1,4 +1,4 @@
-t<?php
+<?php
 
 function connect_sql($host, $login, $passwd, $base) {
 	$con = null;
