@@ -1,32 +1,24 @@
 <?php
 
 require_once("Ship.class.php");
+require_once("Weapon_mitrailleuse.class.php");
+require_once("Weapon_laser.class.php");
 
 class Medium_ship extends Ship{
 
 function __construct(array $kwargs)
 {
 	$this->_Player = $kwargs[0];
-	if ($kwargs[1] == "human")
-	{
-		$this->_hp = 4;
-		$this->_inertie = 3;
-
-	}
-	else if ($kwargs == "eldar")
-	{
-		$this->_hp = 3;
-		$this->_inertie = 2;
-	}
-	else if ($kwargs == "orks")
-	{
-		$this->_hp = 5;
-		$this->_inertie = 4;		
-	}
+	$this->_hp = 4;
+	$this->_inertie = 3;
 	$this->_size = array(w => 5, h=>3);
 	$this->_pp = 5;
-	$this->_point = 400;
+	$this->_point = 200;
 	$this->_sprite = "";
+	$new_w = new Weapon_laser;
+	array_push($this->_weapon, $new_w);
+	$new_w = new Weapon_mitrailleuse;
+	array_push($this->_weapon, $new_w);
 }
 function __destruct()
 {
