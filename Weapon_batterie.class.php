@@ -7,7 +7,8 @@ class Weapon_batterie.class.php extends Weapon{
 
 public function __construct()
 {
-	$_range = 15;
+
+	$_range = array(0=>10, 1=>20, 2=>30);
 	$_radius = 1;
 	$_type = "batterie";
 	$_propagation = 1;

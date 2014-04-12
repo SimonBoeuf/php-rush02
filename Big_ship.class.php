@@ -7,6 +7,8 @@ require_once("Weapon_mitrailleuse.class.php");
 
 class Big_ship extends Ship{
 
+	public $point = 400;
+
 function __construct(array $kwargs)
 {
 	$this->_Player = $kwargs[0];
@@ -16,6 +18,7 @@ function __construct(array $kwargs)
 	$this->_pp = 10;
 	$this->_point = 400;
 	$this->_sprite = "";
+	$this->_speed = 10;
 	$new_w = new Weapon_canon;
 	array_push($this->_weapon, $new_w);
 	$new_w = new Weapon_batterie;

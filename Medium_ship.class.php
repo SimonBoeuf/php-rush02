@@ -6,6 +6,9 @@ require_once("Weapon_laser.class.php");
 
 class Medium_ship extends Ship{
 
+public $point = 200;
+
+
 function __construct(array $kwargs)
 {
 	$this->_Player = $kwargs[0];
@@ -15,6 +18,7 @@ function __construct(array $kwargs)
 	$this->_pp = 5;
 	$this->_point = 200;
 	$this->_sprite = "";
+	$this->_speed = 16;
 	$new_w = new Weapon_laser;
 	array_push($this->_weapon, $new_w);
 	$new_w = new Weapon_mitrailleuse;

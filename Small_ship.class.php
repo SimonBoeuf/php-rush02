@@ -14,6 +14,7 @@ function __construct(array $kwargs)
 	$this->_pp = 5;
 	$this->_point = 100;
 	$this->_sprite = "";
+	$this->_speed = 20;
 	$new_w = new Weapon_laser;
 	array_push($this->_weapon, $new_w);
 }
