@@ -7,7 +7,7 @@
 /*   By: nleroy <nleroy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/04/12 11:41:06 by nleroy            #+#    #+#             */
-/*   Updated: 2014/04/12 18:42:23 by nleroy           ###   ########.fr       */
+/*   Updated: 2014/04/12 20:54:52 by nleroy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 require_once "map.php"
@@ -23,6 +23,7 @@ Class Battlefield
 	private $_players = array();
 	protected $map;
 
+	/* construct battlefield. only used once per game */
 	public function __construct(array $data)
 	{
 		if ($this->map === NULL)
@@ -32,6 +33,7 @@ Class Battlefield
 		if (self::verbose)
 			echo('battlefiled on');
 	}
+	/* destruct battlefield. only used once per game */
 	public function __destruct()
 	{
 		if (self::verbose)
@@ -40,6 +42,7 @@ Class Battlefield
 	public static function doc()
 	{
 	}
+	/* set ships and players's datas. only used once per game */
 	public static function launch()
 	{
 		if (self::$launch == false)
@@ -51,10 +54,12 @@ Class Battlefield
 				{
 					$this->$_players[$i][$j] = new ($this->data[$i][$j]);
 				}
+				$this->$_player[$i]['nb_ship'] = $i;
 			}
 			self::$launch = true;
 		}
 	}
+	/* place ships on the battlefield. only used early in game */
 	public function set_ship(array $pos, $player, $ship)
 	{
 		if ($this->map->getValidElem($pos) &&
@@ -70,8 +75,12 @@ Class Battlefield
 				}
 			}
 		}
-		else return (false);
+		else 
+		{
+			return (false);
+		}
 	}
+	/* select ship to use */
 	public function turn_selectship(array $select)
 	{
 		if ($this->_selectedship = $this->_players[$this->selectedplayer]->Select_ship($select) == false)
@@ -79,18 +88,32 @@ Class Battlefield
 		else
 			return (true);
 	}
+	/* move selected ship */
 	public function moveship()
 	{
 		if ($this->_players[$this->selectedplayer]->mooveship($turn, $this->selectedship))
 			$this->_selectedship = 0;
 	}
+	/* shoot with selected ship */
 	public function shoot($i)
 	{
 		$this->_players[$this->selectedplayer]->Setfire_ship($this->selectedship);		
 	}
+	/* change player */
 	public function setturn($i)
 	{
 		$selected_player = $i;
+	}
+	/* reset values when all shipped have been used */
+	public function reset($player)
+	{
+		if (count($this->_players[$player]) == $this->_players[$player]['nb_ship'])
+		{
+			for ($i ; count($this->_players[$player]) ; $i++)
+			{
+				$this->_players[$player][$i]->setactive() = false;
+			}
+		}
 	}
 }
 ?>
