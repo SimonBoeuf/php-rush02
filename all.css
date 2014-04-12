@@ -85,7 +85,7 @@ div#Bschaos
 	height: 725px;
 }
 
-div#Bsmarin
+div#Beldar
 {
 	position: absolute;
 	z-index: 8;
@@ -134,69 +134,45 @@ div#bg2
 div.refletg
 {
 	position: absolute;
-	top: 100%;
+	top: 105%;
 	left: 0%;
 	height: 100%;
 	width: 100%;	
 	z-index: 7;
-	background: -moz-linear-gradient(top,  rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 1%, rgba(255,255,255,0.45) 15%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.6)), color-stop(1%,rgba(255,255,255,0.6)), color-stop(15%,rgba(255,255,255,0.45)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 1%,rgba(255,255,255,0.45) 15%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 1%,rgba(255,255,255,0.45) 15%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 1%,rgba(255,255,255,0.45) 15%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 1%,rgba(255,255,255,0.45) 15%,rgba(255,255,255,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background: url(saint_reverse.jpg);
 }
 
 div.refleth
 {
 	position: absolute;
-	top: 100%;
+	top: 105%;
 	left: 0%;
 	height: 100%;
 	width: 100%;
 	z-index: 7;
-	background: -moz-linear-gradient(top,  rgba(0,240,15,0.6) 0%, rgba(0,240,15,0.45) 15%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,240,15,0.6)), color-stop(15%,rgba(0,240,15,0.45)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,240,15,0.6) 0%,rgba(0,240,15,0.45) 15%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,240,15,0.6) 0%,rgba(0,240,15,0.45) 15%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,240,15,0.6) 0%,rgba(0,240,15,0.45) 15%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,240,15,0.6) 0%,rgba(0,240,15,0.45) 15%,rgba(255,255,255,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9900f00f', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background: url(necron_reverse.jpg);
 }
 
 div.reflete
 {
 	position: absolute;
-	top: 100%;
+	top: 105%;
 	left: 0%;
 	height: 100%;
 	width: 100%;
 	z-index: 7;
-	background: -moz-linear-gradient(top,  rgba(255,0,0,0.6) 0%, rgba(255,0,0,0.45) 15%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,0,0,0.6)), color-stop(15%,rgba(255,0,0,0.45)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,0,0,0.6) 0%,rgba(255,0,0,0.45) 15%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,0,0,0.6) 0%,rgba(255,0,0,0.45) 15%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,0,0,0.6) 0%,rgba(255,0,0,0.45) 15%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(255,0,0,0.6) 0%,rgba(255,0,0,0.45) 15%,rgba(255,255,255,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ff0000', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background: url(chaos_reverse.jpg);
 }
 
 div.refletes
 {
 	position: absolute;
-	top: 100%;
+	top: 105%;
 	left: 0%;
 	height: 100%;
 	width: 100%;
 	z-index: 7;
-	background: -moz-linear-gradient(top,  rgba(7,0,229,0.6) 0%, rgba(7,0,229,0.6) 1%, rgba(7,0,229,0.45) 15%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(7,0,229,0.6)), color-stop(1%,rgba(7,0,229,0.6)), color-stop(15%,rgba(7,0,229,0.45)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(7,0,229,0.6) 0%,rgba(7,0,229,0.6) 1%,rgba(7,0,229,0.45) 15%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(7,0,229,0.6) 0%,rgba(7,0,229,0.6) 1%,rgba(7,0,229,0.45) 15%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(7,0,229,0.6) 0%,rgba(7,0,229,0.6) 1%,rgba(7,0,229,0.45) 15%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(7,0,229,0.6) 0%,rgba(7,0,229,0.6) 1%,rgba(7,0,229,0.45) 15%,rgba(255,255,255,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990700e5', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background: url(eldar_reverse.jpg);
 }
 
 div#Saint
@@ -206,7 +182,7 @@ div#Saint
 	left: 10%;
 	width: 15%;
 	height: 800px;
-	background: #666;
+	background: url(sister_b.jpg);
 	-webkit-transform: translateZ(0px) rotateY(20deg);
 	-moz-transform: translateZ(0px) rotateY(20deg);
 	-ms-transform: translateZ(0px) rotateY(20deg);
@@ -262,7 +238,7 @@ div#Necrons
 	left: 563px;
 	width: 225px;
 	height: 712px;
-	background: #0F0;
+	background: url(necron.jpg);
 	-webkit-transform: translateZ(0px) rotateY(5deg);
 	-moz-transform: translateZ(0px) rotateY(5deg);
 	-ms-transform: translateZ(0px) rotateY(5deg);
@@ -316,7 +292,7 @@ div#Schaos
 	left: 892px;
 	width: 224px;
 	height: 711px;
-	background: red;
+	background: url(chaos.jpg);
 	-webkit-transform: translateZ(0px) rotateY(-5deg);
 	-moz-transform: translateZ(0px) rotateY(-5deg);
 	-ms-transform: translateZ(0px) rotateY(-5deg);
@@ -363,14 +339,14 @@ div.scha
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-div#Smarin
+div#Eldar
 {
 	position: absolute;
 	top: 3%;
 	left: 75%;
 	width: 15%;
 	height: 800px;
-	background: #0700E5;
+	background: url(eldar.jpg);
 	-webkit-transform: translateZ(0px) rotateY(-20deg);
 	-moz-transform: translateZ(0px) rotateY(-20deg);
 	-ms-transform: translateZ(0px) rotateY(-20deg);
@@ -787,7 +763,7 @@ div.eslight
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#4dffffff',GradientType=0 ); /* IE6-9 */
 }
 
-div#Smarin.close
+div#Eldar.close
 {
 	-webkit-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
 	-moz-transform: translateZ(50px) translateX(-50px) rotateY(-20deg);
@@ -829,16 +805,35 @@ div.eslight.close
 	transition: 0.5s all ease-in;
 }
 
+.race
+{
+	font-size: 30px;
+}
+
+.tra
+{
+	text-shadow: 0 0 10px #000000;
+	color: #FFFFFF;
+	vertical-align: middle;
+	font-size: 20px;
+	text-align: center;
+}
+
 div.textrace
 {
+	color: #FFFFFF;
 	position: absolute;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 	left: 590px;
 	top: 312px;
 	width: 500px;
 	height: 400px;
 	visibility: hidden;
 	z-index: 10;
-	background: #999;
+	background: url(space.jpg);
 }
 
 /* Fin BACKGROUND */
