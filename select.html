@@ -1,0 +1,163 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="./all.css" />
+		<title>TITRE</title>
+	</head>
+
+	<body>
+
+	  <div id="allbg">
+	    <div id="Bsaint"></div>
+	    <div id="Bnecrons"></div>
+	    <div id="Bschaos"></div>
+	    <div id="Beldar"></div>
+    	<div id="bg">
+            <div id="gris"></div>
+        	<div id="bg2"></div>
+        	<div class="tra" id="Saint">Saint Ordre Impérial de l'Inquisition<div class="refletg"><div class="overflo"><div class="rglight"></div></div></div><div class="overflo"><div class="glight"></div></div></div>
+            <div class="st"></div>
+       		<div class="tra" id="Necrons">Necrons<div class="refleth"><div class="overflo"><div class="rhlight"></div></div></div><div class="overflo"><div class="hlight"></div></div></div>
+            <div class="necr"></div>re
+       		<div class="tra" id="Schaos">Space Marines du Chaos<div class="reflete"><div class="overflo"><div class="relight"></div></div></div><div class="overflo"><div class="elight"></div></div></div>
+            <div class="scha"></div>
+   			<div class="tra" id="Eldar">Eldar<div class="refletes"><div class="overflo"><div class="reslight"></div></div></div><div class="overflo"><div class="eslight"></div></div></div>
+            <div class="smar"></div>
+            
+            <div id="sai" class="textrace"><span class="race">Le Saint Ordre Impérial de l'Inquisition</span><br /><br /><br /><br />Choisissez votre Nom de flotte:  <br/><br/><input type="text" name="name"/><br/><br/><input type="submit" value="Valider" ></div>
+			<div id="nec" class="textrace"><span class="race">Les Necrons</span><br /><br /><br /><br />Choisissez votre Nom de flotte:  <br/><br/><input type="text" name="name"/> <br/><br/><input type="submit" value="Valider" ></div>
+            <div id="sch" class="textrace"><span class="race">Les Space Marin du Chaos</span><br /><br /><br /><br />Choisissez votre Nom de flotte:  <br/><br/><input type="text" name="name"/><br/><br/> <input type="submit" value="Valider" ></div>
+            <div id="sma" class="textrace"><span class="race">Les Eldar</span><br /><br /><br /><br />Choisissez votre Nom de flotte:  <br/><br/><input type="text" name="name"/> <br/><br/><input type="submit" value="Valider" ></div>
+            <div id="marbre"></div>
+        </div></div>
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script>
+	jQuery(document).ready(function()
+	{
+		$('div#Bsaint').mouseover(function()
+		{
+			$('div#Saint').toggleClass("close");
+			$('div.glight').toggleClass("close");
+			$('div.st').toggleClass("close");
+			$('div.rglight').toggleClass("close");
+		});
+		$('div#Bsaint').mouseout(function()
+		{
+			$('div#Saint').toggleClass("close");
+			$('div.glight').toggleClass("close");
+			$('div.st').toggleClass("close");
+			$('div.rglight').toggleClass("close");
+		});
+		$('div#Bnecrons').mouseover(function()
+		{
+			$('div#Necrons').toggleClass("close");
+			$('div.hlight').toggleClass("close");
+			$('div.necr').toggleClass("close");
+			$('div.rhlight').toggleClass("close");
+		});
+		$('div#Bnecrons').mouseout(function()
+		{
+			$('div#Necrons').toggleClass("close");
+			$('div.hlight').toggleClass("close");
+			$('div.necr').toggleClass("close");
+			$('div.rhlight').toggleClass("close");
+		});
+		$('div#Bschaos').mouseover(function()
+		{
+			$('div#Schaos').toggleClass("close");
+			$('div.elight').toggleClass("close");
+			$('div.scha').toggleClass("close");
+			$('div.relight').toggleClass("close");
+		});
+		$('div#Bschaos').mouseout(function()
+		{
+			$('div#Schaos').toggleClass("close");
+			$('div.elight').toggleClass("close");
+			$('div.scha').toggleClass("close");
+			$('div.relight').toggleClass("close");
+		});
+		$('div#Beldar').mouseover(function()
+		{
+			$('div#Eldar').toggleClass("close");
+			$('div.eslight').toggleClass("close");
+			$('div.smar').toggleClass("close");
+			$('div.reslight').toggleClass("close");
+		});
+		$('div#Beldar').mouseout(function()
+		{
+			$('div#Eldar').toggleClass("close");
+			$('div.eslight').toggleClass("close");
+			$('div.smar').toggleClass("close");
+			$('div.reslight').toggleClass("close");
+		});
+		$('div#Bsaint').click(function()
+		{
+			if($('div#sai').css('visibility')=='hidden')
+			{
+				$('div#sai').css({visibility : "visible", opacity : 0.0}).animate({opacity: 1.0});
+				$('div#gris').css({visibility : "visible", opacity : 0.0}).animate({opacity: 0.6});
+			}
+		})
+		$('div#Bnecrons').click(function()
+		{
+			if($('div#nec').css('visibility')=='hidden')
+			{
+				$('div#nec').css({visibility : "visible", opacity : 0.0}).animate({opacity: 1.0});
+				$('div#gris').css({visibility : "visible", opacity : 0.0}).animate({opacity: 0.6});
+			}
+		})
+		$('div#Bschaos').click(function()
+		{
+			if($('div#sch').css('visibility')=='hidden')
+			{
+				$('div#sch').css({visibility : "visible", opacity : 0.0}).animate({opacity: 1.0});
+				$('div#gris').css({visibility : "visible", opacity : 0.0}).animate({opacity: 0.6});
+			}
+		})
+		$('div#Beldar').click(function()
+		{
+			if($('div#sma').css('visibility')=='hidden')
+			{
+				$('div#sma').css({visibility : "visible", opacity : 0.0}).animate({opacity: 1.0});
+				$('div#gris').css({visibility : "visible", opacity : 0.0}).animate({opacity: 0.6});
+			}
+		})
+		$('div#gris').click(function()
+		{
+			if($('div#gris').css('visibility')=='visible')
+			{
+				if($('div#sai').css('visibility')=='visible')
+				{
+					$('div#sai').css({opacity : 1.0}).animate({opacity: 0.0}, 300);
+				}
+				if($('div#nec').css('visibility')=='visible')
+				{
+					$('div#nec').css({opacity : 1.0}).animate({opacity: 0.0}, 300);
+				}
+				if($('div#sch').css('visibility')=='visible')
+				{
+					$('div#sch').css({opacity : 1.0}).animate({opacity: 0.0}, 300);
+				}
+				if($('div#sma').css('visibility')=='visible')
+				{
+					$('div#sma').css({opacity : 1.0}).animate({opacity: 0.0}, 300);
+				}
+				$('div#gris').css({opacity : 0.6}).animate({opacity: 0.0}, 300);
+				setTimeout(function()
+				{
+					$('div#gris').css({visibility : "hidden"});
+					$('div#sai').css({visibility : "hidden"});
+					$('div#nec').css({visibility : "hidden"});
+					$('div#sch').css({visibility : "hidden"});
+					$('div#sma').css({visibility : "hidden"});
+				}, 300);
+			}
+		});
+	});
+	</script>
+	</body>
+    
+</html>
