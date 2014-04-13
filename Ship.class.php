@@ -19,6 +19,7 @@ abstract class Vaisseau {
 	protected $_stationary = true;
 	protected $_point = 0;
 	protected $_Player;
+	protected $_touch = false;
 
 
 	public function __construct(array $kwargs)
@@ -46,6 +47,7 @@ abstract class Vaisseau {
 	public function getinertie(){return ($this->_inertie)};
 	public function getspeed(){return ($this->_speed)};
 	public function getsize(){return ($this->_size)};
+	public function gettouch(){return ($this->_touch)};
 	public function getstationary(){return ($this->_stationary)};
 	public function getPlayer(){return ($this->_Player)};
 	public function getweapon($indice)
@@ -69,7 +71,8 @@ abstract class Vaisseau {
 	public function setsprite($value){$this->_sprite = $value};
 	public function setpos($value){$this->_pos = $value};
 	public function setorientation($value){$this->_orientation = $value};
-	public function setstationary(){$this->_stationary = $value};
+	public function setstationary($value){$this->_stationary = $value};
+	public function settouch($value){$this->_touch = $value};
 
 }
 
